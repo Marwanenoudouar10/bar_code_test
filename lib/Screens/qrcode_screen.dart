@@ -6,7 +6,7 @@ import 'package:mobile_scanner/mobile_scanner.dart';
 
 class QrcodeScreen extends StatefulWidget {
   const QrcodeScreen({super.key});
-
+  final bgcolor = const Color(0xfffafafa);
   @override
   State<QrcodeScreen> createState() => _QrcodeScreenState();
 }
@@ -109,8 +109,8 @@ class _QrcodeScreenState extends State<QrcodeScreen>
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(20),
-                      child: const QRScannerOverlay(
-                        overlayColour: Colors.blue,
+                      child: QRScannerOverlay(
+                        overlayColour: widget.bgcolor,
                       ),
                     ),
                   ],
